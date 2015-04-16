@@ -1,0 +1,924 @@
+body, nav, ul, li, a  {margin: 0; padding: 0;}
+body {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;}
+
+/*Make all of the hyperlink without underline*/
+a {text-decoration: none;}
+
+
+/*The main container of the whole page*/
+#mainContainer {
+    width:100%;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+.header{
+    height: 100px;
+    width: 1200px;
+    min-width: 800px ;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#logo {
+    float:left;
+    margin-left: 10px;
+    width: 350px;
+    height: 100px;
+    min-width: 333px;
+}
+
+#logo img{
+     height:100px;
+}
+
+
+
+
+.menuContainer {
+    height:50px;
+    margin-top: 25px;
+    float:right;
+    width: 700px;
+    min-width: 600px;
+
+}
+
+
+
+
+
+
+
+/*tutorial code from http://webdesign.tutsplus.com/tutorials/big-menus-small-screens-responsive-multi-level-navigation-webdesign-8452 used as a starting point to create navigation bar   
+ We will improve and enhance this dropdown menu to archive more user friendly at Assignment2/3*/
+.nav {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    letter-spacing: 4px;
+    list-style: none;
+     background: #ffffff;
+}
+
+
+.nav:after{
+    content: " "; 
+    display: table; 
+}
+.nav:after {
+    clear: both;
+}
+.nav ul {
+    list-style: none;
+    width: auto;
+}
+.nav a {
+    padding: 10px 15px;
+    color: #000000;
+}
+.nav a:hover{
+    color: #ffffff;
+}
+
+.nav li {
+    position: relative;
+    width: auto;
+
+}
+.nav > li {
+    float: left;
+    border-top: 1px solid #726277;
+    border-bottom: 1px solid #726277;
+}
+.nav > li > .parent {
+    background-image: url("../images/downArrow.png");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.nav > li > a {
+    display: block;
+}
+.nav > li > a:hover {
+    background-color: #e4dae0;
+}
+
+
+.nav li  ul {
+    position: absolute;
+    left: -9999px;
+}
+.nav > li.hover > ul {
+    left: 0;
+}
+.nav li li.hover ul {
+    left: 100%;
+    top: 0;
+}
+.nav li li a {
+    display: block;
+    background: #e4dae0;
+    position: relative;
+    z-index:100;
+    border-top: 1px solid #175e4c;
+}
+.nav li li li a {
+    background:#efe9ec;
+    z-index:200;
+    border-top: 1px solid #1d7a62;
+}
+
+
+
+
+
+
+
+
+/*Central big banner of the contact page*/
+.contactBanner {
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    clear:both;
+    text-align:center;
+}
+
+
+
+.contactBanner {
+    background-image: url("../images/Banners/BannerBG.png");
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.weekDayBanner{
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover;
+    width: 100%;
+    height: 100px;
+    clear:both;
+    text-align:center;
+    background-image: url("../images/Banners/BannerBG.png");
+
+    font-family: 'Lora', sans-serif;
+    font-size: 80px;
+    color: #ffffff;
+    letter-spacing: 6px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+.textContent{
+    font-family: 'Lora', sans-serif;
+    font-size: 45px;
+    color: #ffffff;
+    letter-spacing: 6px;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+    padding-top: 30px;
+    line-height: 80px;
+}
+
+.textContent b:hover {
+    color: #000000;
+}
+
+.textContent a:link {
+    color: #ffffff;
+    font-weight: 900;
+}
+
+
+.textContent a:visited{
+    color: #ffffff;
+
+}
+
+
+.buttonContainer {
+    width:90%;
+    min-width: 600px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 250px;
+}
+
+.button {
+    width:25%;
+    text-align: center;
+    float:left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.button img { 
+    display:block; 
+    width: 120px;
+    min-width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}  
+
+
+
+.button a:link, .button a:visited, .button a:hover, .button a:active{
+    font-family: 'Amatic SC', serif;
+    font-size: 30px;
+    color: black;
+
+}
+
+
+
+
+
+
+
+
+.infoContainer{
+    width: 900px;
+    min-width: 800px;
+    height: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+
+.infoContainer h1{ 
+    font-size: 40px; 
+    text-align: center;
+    color: #000000; 
+    padding-top: 10px;
+    font-family: 'Lora', serif;
+    border-top-style: dotted; 
+    border-top-color: #CCCCCC; 
+    border-top-width: 2px; 
+    border-bottom-style: dotted; 
+    border-bottom-color: #CCCCCC; 
+    border-bottom-width: 2px; 
+    border-radius: 0px; 
+    background-color: #FFFFFF; 
+    letter-spacing: 4px;
+} 
+
+
+
+ .contactUS{ 
+    float: left;
+    width: 400px;
+    min-width: 400px; 
+    border-width: 2px; 
+    border-color: #726277; 
+    border-radius: 4px; 
+    border-style: solid; 
+    color: #726277; 
+    font-size: 14px; 
+    padding-top: 10px; 
+    padding-right: 50px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+} 
+
+
+
+
+.contactUS label{ 
+    color: #222222; 
+    font-size: 14px; 
+    display: inline-block; 
+} 
+
+.contactUS div{ 
+    display: block; 
+} 
+.contactUS input, contactUS textarea, contactUS select{ 
+    border-width: 1px; 
+    border-style: solid; 
+    border-color: #666666; 
+    border-radius: 0px; 
+    padding: 3px; 
+    width: 100%; 
+} 
+
+.contactUS input[type=radio], input[type=checkbox]{ 
+    width: 20px; 
+} 
+
+
+
+
+
+
+
+
+.intro{ 
+    margin-bottom: 10px; 
+} 
+.clear{ 
+    clear: both; 
+} 
+.contactUS textarea{ 
+    width: 100%; 
+    height: 110px;
+    resize: none;
+} 
+.contactUS input[type=submit], input[type=reset]{ 
+    width:60px;
+    height: 30px;
+    background-color: #D1D6E7; 
+    color: #6E0F4B; 
+} 
+.field1, .field2{ 
+    margin-top: 10px; 
+    letter-spacing: 3px;
+
+} 
+
+
+.field1:before {
+    color: red;
+    content: "⋆";
+    font-size: 20px;
+}
+
+
+
+
+.contactUS input[type=submit]:hover, input[type=reset]:hover{ 
+    background-color: #6E0F4B; 
+    color: #D1D6E7; 
+
+}
+
+.contactUS input[type=submit]:active, input[type=reset]:active{ 
+    background-color: #A81146;
+    color: #D0C953;
+}
+
+
+#subject{
+    display: block;
+    width: 100%;
+}
+
+#requireField {
+    font-size: 10px;
+    letter-spacing: 0px;
+}
+
+#checkboxMessage{
+    letter-spacing: 0px;
+}
+
+
+
+
+
+ .findUS{ 
+    float: right;
+    min-width: 300px;
+    width: 300px;
+    color: #726277; 
+    font-size: 14px; 
+} 
+
+
+/*Restrict the title be smaller*/
+.findUS h1{
+    font-size: 30px;
+}
+
+.title1{
+    display: block;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.findUS p{
+    text-align: justify;
+}
+
+
+
+
+
+.currentPage { 
+background-color: #e4dae0;
+}
+
+
+
+
+
+
+/*-----------footer-----------*/
+.footer {
+    font-family: 'Lora', sans-serif;
+    /*margin-top: 150px;*/
+    background-color:#cabdcd;
+    color:#000000;
+    clear:both;
+    height:110px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    min-width: 1200px;
+}
+
+
+
+
+.footerLeftContainer{
+    float: left;
+    width:650px;
+    margin: 8px;
+    height: 100px;
+    text-align: left;
+    vertical-align: bottom;
+}
+
+
+.footerLeft1{
+    margin-top: 15px; 
+    font-size: 18px;
+    left: 10px;
+    font-weight: 900;
+
+}
+
+.footerLeft2{
+    vertical-align: bottom;
+    text-align: left;
+    bottom: 10px; 
+    left: 10px;
+    position: absolute; 
+
+}
+
+
+
+
+.footerRightContainer{
+    float: right;
+    width: 450px;
+}
+
+
+.footerRight{
+    text-align: left;
+    margin: 8px ;
+    vertical-align: bottom;
+}
+
+
+
+.footerLeft1 a{
+margin: 5px;
+}
+
+/* unvisited link */
+.footerLeft1 a:link {
+    color: #000000;
+}
+
+/* visited link */
+.footerLeft1 a:visited {
+    color: #000000;
+}
+
+/* mouse over link */
+.footerLeft1 a:hover {
+    background-color: #907496;
+    color: #ffffff;
+}
+
+/* selected link */
+.footerLeft1 a:active {
+    color: #000000;
+
+} 
+
+
+
+
+
+
+
+
+
+
+
+/*for movie page*/
+
+
+.movieBlock {
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover;
+    width: 60%;
+    height: 900px;
+    min-width: 700px;
+    position: relative;
+    overflow: auto;
+    z-index: 0; 
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 30px;
+
+}
+
+
+
+.topBlock {
+    width: 100%;
+    display: block; 
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover;
+    height: 200px;
+    clear:both;
+    background-image: url("../images/movie/bigHero.jpg");
+}
+
+
+
+
+
+.leftBlock {
+    display: block;
+    float: left; 
+    height: 600px;
+    min-width: 300px;
+    width: 40%;
+    background-color: #c29ec0;
+}
+
+.rightBlock {
+    display: block;
+    float: right; 
+    height: 600px;
+    min-width: 400px;
+    width: 60%;
+    background-color: #c29ec0;
+}
+
+
+
+.leftBlock h1{ 
+    font-size: 30px; 
+    color: #ffffff;
+    text-align: center;
+    padding-top: 10px;
+    font-family: 'Lora', serif;
+    border-top-style: dotted; 
+    border-top-color: #ffffff; 
+    border-top-width: 2px; 
+    border-bottom-style: dotted; 
+    border-bottom-color: #ffffff; 
+    border-bottom-width: 2px; 
+    border-radius: 0px; 
+    letter-spacing: 4px;
+} 
+
+
+.leftBlock div{
+        padding-left: 30px;
+
+}
+
+.movieBlock p{
+    font-size: 15px; 
+    text-align: center;
+    color: #ffffff;
+    text-align: justify;
+    font-family: 'Lora', serif;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+#booking{
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+
+/*end of for movie page*/
+
+
+
+
+
+/*Buy Ticket*/
+
+ .movieForm{ 
+    max-width: 100%; 
+    min-width: 25%; 
+    border-width: 0px; 
+    border-color: #CCCCCC; 
+    border-style: solid; 
+    font-family: 'Lora', serif;
+    color: white; 
+    font-size: 14px; 
+    margin: 0px; 
+    padding: 20px; 
+} 
+.content2{ 
+    margin: 0px; 
+} 
+.movieForm label{ 
+    font-size: 12px; 
+    display: block; 
+} 
+
+.movieForm div{ 
+    display: block; 
+} 
+.movieForm input, movieForm select{ 
+    border-width: 1px; 
+    border-style: solid; 
+    border-color: #666666; 
+    border-radius: 0px; 
+    color: #ffffff;
+    padding: 3px; 
+    padding-bottom: 10px;
+    width: 100%; 
+} 
+
+.movieForm input{
+        padding-bottom: 2px;
+}
+
+.movieForm h1{ 
+    font-size: 20px; 
+    color: #ffffff;  
+    text-align: left;
+    margin-bottom: 10px; 
+ 
+} 
+.intro2{ 
+    margin-bottom: 10px; 
+} 
+.clear2{ 
+    clear: both; 
+} 
+.movieForm textarea{ 
+    height: 50px; 
+    width: 100%; 
+} 
+.movieForm input[type=submit], .movieForm input[type=button]{ 
+    width: 70px; 
+    background-color: #CCCCCC; 
+    color: #222222; 
+} 
+.field2{ 
+    margin-bottom: 5px; 
+    color: #ffffff;
+} 
+
+.ticketTitle{
+    background-color: #876E86;
+    height: 30px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.ticketTitle2{
+    height: 30px;
+}
+
+
+.ticketTitleRight{
+    text-align: right;
+    float: right;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+
+.ticketTitleLeft{
+    text-align: left;
+    float: left;
+    padding-left: 10px;
+    padding-top: 10px;
+
+}
+
+
+.ticketRight{
+    float: right;
+}
+
+.ticketBlock{
+    margin-bottom: 10px;
+}
+
+
+
+/*end of buy ticket*/
+
+
+
+
+
+
+
+
+/*for weekday div*/
+.blended_grid{
+display : block;
+width : 1000px;
+overflow : auto;
+margin-left: auto;
+margin-right: auto;
+}
+.pageBarRight{
+float : left;
+clear : none;
+min-width : 80px;
+min-height : 80px;
+}
+.pageRightTop{
+background-color : yellow;
+float : none;
+clear : both;
+height : 300px;
+width : 200px;
+}
+.pageRightMid{
+background-color : green;
+float : none;
+clear : both;
+height : 300px;
+width : 200px;
+}
+.pageRightBottom{
+background-color : blue;
+float : none;
+clear : both;
+height : 300px;
+width : 200px;
+}
+.pageContent{
+background-color : purple;
+float : left;
+clear : none;
+height : 900px;
+width : 800px;
+}
+
+
+
+
+.pageBarRight a{
+    font-size: 50px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+
+
+
+
+
+/*TAB*/
+h1 {
+    margin: 1em 0;
+    text-align: center;
+}
+
+#container {
+    margin: 0 auto;
+    width: 80%;  /* Width of the container */
+    margin-bottom: 10px;
+}
+
+#container input {
+    height: 40px;
+    visibility: hidden;
+}
+
+#container label {
+    background: #f9f9f9;  /* tab background */
+    border-radius: .25em .25em 0 0;
+    color: #888;  /* tab color */
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-size: 20px;  /* tab font-size */
+    height: 50px; /* tab height */
+    width: 120px; /* tab width */
+    line-height: 2.5em;
+    margin-right: .25em;
+    padding: 0 1.5em;
+    text-align: center;
+}
+
+#container input:hover + label {
+    background: #ddd;  /* Fondo de las pestañas al pasar el cursor por encima */
+    color: #666;  /* Color del texto de las pestañas al pasar el cursor por encima */
+}
+
+#container input:checked + label {
+    background: #f1f1f1;  /* Fondo de las pestañas al presionar */
+    color: #444; /* Color de las pestañas al presionar */
+    position: relative;
+    z-index: 6;
+    /*
+    -webkit-transition: .1s;
+    -moz-transition: .1s;
+    -o-transition: .1s;
+    -ms-transition: .1s;
+    */
+}
+
+#content {
+    background: #f1f1f1;  /* Fondo del contenido */
+    border-radius: 0 .25em .25em .25em;
+    min-height: 20em;  /* Alto del contenido */
+    position: relative;
+    width: 100%;
+    z-index: 5;
+}
+
+#content div {
+    opacity: 0;
+    padding: 1.5em;
+    position: absolute;
+    z-index: -100;
+    /*
+    transition: all linear 0.1s;
+    */
+}
+
+#content-1 p {
+    clear: both;
+    margin-bottom: 1em;
+}
+#content-1 p.left img {
+    float: left;
+    margin-right: 1em;
+}
+#content-1 p.last {
+    margin-bottom: 0;
+}
+
+#content-2 p {
+    float: left;
+    width: 48.5%;
+}
+#content-2 p.column-right {
+    margin-left: 3%;
+}
+#content-2 p img {
+    display: block;
+    margin: 0 auto 1em auto;
+}
+#content-3 p,
+#content-3 ul {
+    margin-bottom: 1em;
+}
+#content-3 ul {
+    margin-left: 2em;
+}
+
+#container input#tab-1:checked ~ #content #content-1,
+#container input#tab-2:checked ~ #content #content-2,
+#container input#tab-3:checked ~ #content #content-3 {
+    opacity: 1;
+    z-index: 100;
+}
+
+input.visible {
+  visibility: visible !important;
+}
+
+
+
+
+
+
+
+
